@@ -1,0 +1,52 @@
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  z-index: 50;
+  transform: translateY(-200%);
+  background: #2b1b16;
+  color: #fffdfc;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: transform 180ms ease-out;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+  outline: 2px solid #c58a5a;
+  outline-offset: 3px;
+}
+
+.footer-link {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  color: #e9ded0;
+  transition: color 180ms ease-out;
+}
+
+.footer-link:hover {
+  color: #c58a5a;
+}
+
+.footer-link:focus-visible {
+  outline: 2px solid #c58a5a;
+  outline-offset: 4px;
+}
+
+@media (min-width: 1024px) {
+  .site-header {
+    position: relative;
+  }
+}
