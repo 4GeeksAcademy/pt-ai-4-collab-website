@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta
+    name="description"
+    content="Explore the Su Misura collection of considered Italian shoes and leather goods."
+  />
+
+  <title>Catalog — Su Misura</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body class="bg-[#f6f0e8] text-[#2b1b16]">
+
+  <!-- Catalog-only page shell -->
+  <a
+    href="#main-content"
+    class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:bg-[#2b1b16] focus:px-4 focus:py-3 focus:text-white"
+  >
+    Skip to main content
+  </a>
+
+  <header class="border-b border-[#e9ded0] bg-[#f6f0e8]">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-5 sm:px-8 lg:px-10">
+
+      <a
+        href="../index.html"
+        class="font-serif text-2xl tracking-[0.08em] text-[#2b1b16]"
+        aria-label="Su Misura home"
+      >
+        Su Misura
+      </a>
+
+      <nav aria-label="Catalog navigation">
+        <ul class="flex items-center gap-4 text-sm sm:gap-7">
+          <li>
+            <a
+              href="../index.html?view=catalog"
+              class="border-b-2 border-[#5a3425] pb-2 font-medium"
+              aria-current="page"
+            >
+              Catalog
+            </a>
+          </li>
+          <li>
+            <a
+              href="../index.html?view=shoes"
+              class="hidden pb-2 sm:inline-block"
+            >
+              Shoes
+            </a>
+          </li>
+          <li>
+            <a
+              href="../index.html?view=leather-goods"
+              class="hidden pb-2 sm:inline-block"
+            >
+              Leather goods
+            </a>
+          </li>
+          <li>
+            <a
+              href="../index.html?view=cart"
+              class="pb-2 font-medium"
+            >
+              Bag <span aria-hidden="true">0</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+
+    <!-- Catalog introduction -->
+    <section
+      aria-labelledby="catalog-heading"
+      class="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-10 lg:py-24"
+    >
+      <div class="max-w-2xl">
+
+        <p class="text-xs font-semibold uppercase tracking-[0.22em] text-[#765f53]">
+          The collection
+        </p>
+
+        <h1
+          id="catalog-heading"
+          class="mt-4 font-serif text-5xl leading-none tracking-[-0.03em] sm:text-6xl"
+        >
+          Considered pieces for everyday life.
+        </h1>
+
+        <p class="mt-6 max-w-xl text-lg leading-8 text-[#765f53]">
+          Explore Italian shoes and leather goods shaped by material,
+          construction, and quiet attention to detail.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- Catalog controls -->
+    <section
+      aria-labelledby="filter-heading"
+      class="border-y border-[#e9ded0] bg-[#e9ded0]"
+    >
+      <div class="mx-auto max-w-7xl px-5 py-6 sm:px-8 lg:px-10">
+
+        <h2 id="filter-heading" class="sr-only">
+          Filter products
+        </h2>
+
+        <form
+          id="catalog-filters"
+          class="grid gap-5 md:grid-cols-[1fr_1fr_auto]"
+        >
+
+          <div>
+            <label
+              for="category-filter"
+              class="mb-2 block text-sm font-medium"
+            >
+              Category
+            </label>
+
+            <select
+              id="category-filter"
+              name="category"
+              class="min-h-11 w-full border border-[#2b1b16] bg-[#fffdfc] px-3 text-base"
+            >
+              <option value="all">All categories</option>
+              <option value="shoes">Shoes</option>
+              <option value="leather-goods">Leather goods</option>
+            </select>
+          </div>
+
+          <div>
+            <label
+              for="size-filter"
+              class="mb-2 block text-sm font-medium"
+            >
+              Size
+            </label>
+
+            <select
+              id="size-filter"
+              name="size"
+              class="min-h-11 w-full border border-[#2b1b16] bg-[#fffdfc] px-3 text-base"
+            >
+              <option value="all">All sizes</option>
+              <option value="38">38</option>
+              <option value="39">39</option>
+              <option value="40">40</option>
+              <option value="41">41</option>
+              <option value="42">42</option>
+              <option value="43">43</option>
+              <option value="44">44</option>
+              <option value="45">45</option>
+            </select>
+          </div>
+
+          <div class="flex items-end">
+            <button
+              type="reset"
+              class="min-h-11 w-full border border-[#2b1b16] px-5 text-sm font-medium transition hover:bg-[#f6f0e8] focus-visible:outline-2 focus-visible:outline-[#c58a5a] md:w-auto"
+            >
+              Clear filters
+            </button>
+          </div>
+
+        </form>
+
+        <p
+          id="catalog-status"
+          class="mt-4 text-sm text-[#765f53]"
+          role="status"
+          aria-live="polite"
+        >
+          Showing 20 products
+        </p>
+
+      </div>
+    </section>
+
+    <!-- Product collection -->
+    <section
+      aria-labelledby="products-heading"
+      class="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-20 lg:px-10"
+    >
+
+      <div class="mb-8 flex items-end justify-between gap-4">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[#765f53]">
+            Su Misura
+          </p>
+
+          <h2
+            id="products-heading"
+            class="mt-2 font-serif text-3xl"
+          >
+            The collection
+          </h2>
+        </div>
+      </div>
+
+      <div
+        id="product-grid"
+        class="grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-4"
+      ></div>
+
+      <p
+        id="empty-state"
+        class="hidden border border-[#e9ded0] bg-[#fffdfc] p-10 text-center text-[#765f53]"
+      >
+        No products match the selected filters.
+      </p>
+
+    </section>
+
+  </main>
+
+  <footer class="bg-[#2b1b16] text-[#f6f0e8]">
+    <div class="mx-auto max-w-7xl px-5 py-12 sm:px-8 lg:px-10">
+
+      <p class="font-serif text-2xl">
+        Su Misura
+      </p>
+
+      <p class="mt-3 max-w-md text-sm leading-6 text-[#e9ded0]">
+        Quiet objects, carefully made. A considered collection of
+        Italian shoes and leather goods.
+      </p>
+
+      <p class="mt-8 border-t border-[#765f53] pt-5 text-xs text-[#e9ded0]">
+        © 2026 Su Misura. All rights reserved.
+      </p>
+
+    </div>
+  </footer>
+
+
+  <!-- Catalog prototype data and behavior -->
+  <script>
+    const products = [
+      {
+        id: 1,
+        name: "Luca Derby",
+        category: "shoes",
+        material: "Polished calf leather",
+        price: "€420",
+        sizes: [39, 40, 41, 42, 43, 44]
+      },
+      {
+        id: 2,
+        name: "Matteo Loafer",
+        category: "shoes",
+        material: "Suede",
+        price: "€395",
+        sizes: [38, 39, 40, 41, 42, 43]
+      },
+      {
+        id: 3,
+        name: "Roma Oxford",
+        category: "shoes",
+        material: "Full-grain leather",
+        price: "€450",
+        sizes: [40, 41, 42, 43, 44, 45]
+      },
+      {
+        id: 4,
+        name: "Pietro Chelsea",
+        category: "shoes",
+        material: "Brushed calf leather",
+        price: "€470",
+        sizes: [39, 40, 41, 42, 43, 44]
+      },
+      {
+        id: 5,
+        name: "Alba Ballet",
+        category: "shoes",
+        material: "Soft nappa leather",
+        price: "€340",
+        sizes: [38, 39, 40, 41, 42]
+      },
+      {
+        id: 6,
+        name: "Venezia Moccasin",
+        category: "shoes",
+        material: "Pebbled leather",
+        price: "€410",
+        sizes: [39, 40, 41, 42, 43, 44]
+      },
+      {
+        id: 7,
+        name: "Milano Ankle Boot",
+        category: "shoes",
+        material: "Vegetable-tanned leather",
+        price: "€490",
+        sizes: [40, 41, 42, 43, 44, 45]
+      },
+      {
+        id: 8,
+        name: "Torino Sneaker",
+        category: "shoes",
+        material: "Leather and suede",
+        price: "€365",
+        sizes: [39, 40, 41, 42, 43, 44]
+      },
+      {
+        id: 9,
+        name: "Firenze Double Monk",
+        category: "shoes",
+        material: "Antique calf leather",
+        price: "€465",
+        sizes: [40, 41, 42, 43, 44]
+      },
+      {
+        id: 10,
+        name: "Napoli Penny Loafer",
+        category: "shoes",
+        material: "Suede",
+        price: "€390",
+        sizes: [38, 39, 40, 41, 42, 43]
+      },
+      {
+        id: 11,
+        name: "Porta Card Case",
+        category: "leather-goods",
+        material: "Grained leather",
+        price: "€120",
+        sizes: []
+      },
+      {
+        id: 12,
+        name: "Roma Belt",
+        category: "leather-goods",
+        material: "Full-grain leather",
+        price: "€145",
+        sizes: []
+      },
+      {
+        id: 13,
+        name: "Milano Tote",
+        category: "leather-goods",
+        material: "Vegetable-tanned leather",
+        price: "€520",
+        sizes: []
+      },
+      {
+        id: 14,
+        name: "Luce Shoulder Bag",
+        category: "leather-goods",
+        material: "Nappa leather",
+        price: "€480",
+        sizes: []
+      },
+      {
+        id: 15,
+        name: "Pisa Document Case",
+        category: "leather-goods",
+        material: "Calf leather",
+        price: "€430",
+        sizes: []
+      },
+      {
+        id: 16,
+        name: "Vela Wallet",
+        category: "leather-goods",
+        material: "Grained calf leather",
+        price: "€175",
+        sizes: []
+      },
+      {
+        id: 17,
+        name: "Firenze Travel Bag",
+        category: "leather-goods",
+        material: "Waxed leather",
+        price: "€690",
+        sizes: []
+      },
+      {
+        id: 18,
+        name: "Como Card Holder",
+        category: "leather-goods",
+        material: "Smooth calf leather",
+        price: "€110",
+        sizes: []
+      },
+      {
+        id: 19,
+        name: "Lago Crossbody",
+        category: "leather-goods",
+        material: "Soft leather",
+        price: "€395",
+        sizes: []
+      },
+      {
+        id: 20,
+        name: "Torino Portfolio",
+        category: "leather-goods",
+        material: "Full-grain leather",
+        price: "€285",
+        sizes: []
+      }
+    ];
+
+    const productGrid = document.querySelector("#product-grid");
+    const categoryFilter = document.querySelector("#category-filter");
+    const sizeFilter = document.querySelector("#size-filter");
+    const filterForm = document.querySelector("#catalog-filters");
+    const status = document.querySelector("#catalog-status");
+    const emptyState = document.querySelector("#empty-state");
+
+    function categoryLabel(category) {
+      return category === "leather-goods"
+        ? "Leather goods"
+        : "Shoes";
+    }
+
+    function createProductImage(product) {
+      const hue = product.category === "shoes"
+        ? "#c58a5a"
+        : "#9a6040";
+
+      return `
+        <div
+          class="flex aspect-[4/5] items-end justify-start bg-[#e9ded0] p-5"
+          role="img"
+          aria-label="${product.name}, ${product.material}"
+        >
+          <div class="w-full border-l-2 border-[${hue}] pl-4">
+            <span class="font-serif text-2xl text-[#5a3425]">
+              Su Misura
+            </span>
+          </div>
+        </div>
+      `;
+    }
+
+    function createProductCard(product) {
+      return `
+        <article class="group">
+
+          <a
+            href="../index.html?view=product&id=${product.id}"
+            class="block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c58a5a]"
+            aria-label="View details for ${product.name}"
+          >
+
+            ${createProductImage(product)}
+
+            <div class="pt-5">
+
+              <p class="text-xs font-semibold uppercase tracking-[0.16em] text-[#765f53]">
+                ${categoryLabel(product.category)}
+              </p>
+
+              <h3 class="mt-2 font-serif text-xl">
+                ${product.name}
+              </h3>
+
+              <p class="mt-1 text-base text-[#765f53]">
+                ${product.material}
+              </p>
+
+              <p class="mt-3 text-sm font-medium">
+                ${product.price}
+              </p>
+
+              ${
+                product.sizes.length
+                  ? `<p class="mt-2 text-sm text-[#765f53]">
+                       Sizes ${product.sizes[0]}–${product.sizes[product.sizes.length - 1]}
+                     </p>`
+                  : `<p class="mt-2 text-sm text-[#765f53]">
+                       One size
+                     </p>`
+              }
+
+            </div>
+
+          </a>
+
+          <button
+            type="button"
+            class="mt-4 min-h-11 w-full border border-[#2b1b16] px-4 text-sm font-medium transition hover:bg-[#e9ded0] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c58a5a]"
+            data-product-id="${product.id}"
+          >
+            Add to bag
+          </button>
+
+        </article>
+      `;
+    }
+
+    function renderProducts() {
+      const category = categoryFilter.value;
+      const size = sizeFilter.value;
+
+      const filteredProducts = products.filter((product) => {
+        const matchesCategory =
+          category === "all" || product.category === category;
+
+        const matchesSize =
+          size === "all" ||
+          product.sizes.includes(Number(size));
+
+        return matchesCategory && matchesSize;
+      });
+
+      productGrid.innerHTML = filteredProducts
+        .map(createProductCard)
+        .join("");
+
+      emptyState.classList.toggle(
+        "hidden",
+        filteredProducts.length !== 0
+      );
+
+      status.textContent =
+        `Showing ${filteredProducts.length} ${
+          filteredProducts.length === 1 ? "product" : "products"
+        }`;
+
+      document.querySelectorAll("[data-product-id]").forEach((button) => {
+        button.addEventListener("click", () => {
+          const product = products.find(
+            (item) => item.id === Number(button.dataset.productId)
+          );
+
+          button.textContent = `${product.name} added to bag`;
+          button.setAttribute("aria-label", `${product.name} added to bag`);
+        });
+      });
+    }
+
+    categoryFilter.addEventListener("change", renderProducts);
+    sizeFilter.addEventListener("change", renderProducts);
+
+    filterForm.addEventListener("reset", () => {
+      requestAnimationFrame(renderProducts);
+    });
+
+    renderProducts();
+  </script>
+
+</body>
+</html>
