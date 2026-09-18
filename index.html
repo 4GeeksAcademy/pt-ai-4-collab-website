@@ -32,11 +32,194 @@
       <p class="sr-only" role="status" aria-live="polite" data-site-status></p>
     </header>
     <main id="main-content" tabindex="-1">
-      <section class="mx-auto grid max-w-7xl gap-10 px-5 py-20 sm:px-8 sm:py-28 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:px-10 lg:py-36">
-        <div class="max-w-xl"><p class="mb-5 text-xs font-semibold uppercase tracking-[0.22em] text-[#765f53]">Italian leather · Made with intention</p><h1 class="font-serif text-5xl leading-[0.98] tracking-[-0.03em] text-[#2b1b16] sm:text-7xl">Objects with a life of their own.</h1><p class="mt-7 max-w-lg text-lg leading-8 text-[#765f53]">Considered shoes and leather goods, shaped by skilled hands and made to become part of your everyday.</p><div class="mt-9 flex flex-wrap gap-3"><a class="inline-flex min-h-12 items-center justify-center bg-[#5a3425] px-6 text-sm font-medium text-[#fffdfc] transition-colors duration-200 hover:bg-[#9a6040] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c58a5a]" href="index.html?view=catalog">Explore the collection</a><a class="inline-flex min-h-12 items-center justify-center border border-[#2b1b16] px-6 text-sm font-medium text-[#2b1b16] transition-colors duration-200 hover:bg-[#e9ded0] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c58a5a]" href="index.html?view=about">Our approach</a></div></div>
-        <div class="flex min-h-80 items-end bg-[#e9ded0] p-7 sm:min-h-[28rem] sm:p-10" aria-label="Warm parchment editorial image placeholder" role="img"><div class="border-l border-[#9a6040] pl-5"><p class="font-serif text-3xl leading-tight text-[#5a3425]">Made for the long way around.</p></div></div>
+      <section class="cart-page-shell" aria-labelledby="cart-title">
+        <div class="cart-panel">
+          <div class="brand-strip" aria-label="Brand navigation">
+            <div class="brand-mark">MAISON</div>
+            <div class="brand-links">
+              <span>New Arrivals</span>
+              <span>Women</span>
+              <span>Men</span>
+              <span>Accessories</span>
+            </div>
+          </div>
+
+          <header class="cart-header">
+            <div>
+              <p class="eyebrow">My bag</p>
+              <h1 id="cart-title">Shopping cart</h1>
+            </div>
+            <span class="cart-count" data-cart-count>3 items</span>
+          </header>
+
+          <div class="cart-layout">
+            <div class="cart-items" aria-label="Cart items">
+              <article class="cart-item luxury-item" data-unit-price="480">
+                <div class="item-image image-boot" aria-hidden="true"></div>
+                <div class="item-details">
+                  <div class="item-topline">
+                    <div>
+                      <h2>Leather Boot</h2>
+                      <p class="meta">Italian calfskin • Size 9</p>
+                    </div>
+                    <span class="price">$480.00</span>
+                  </div>
+
+                  <div class="item-meta-row">
+                    <div>
+                      <span class="label">Unit Price</span>
+                      <strong>$480.00</strong>
+                    </div>
+                    <div>
+                      <span class="label">Quantity</span>
+                      <div class="qty-control" aria-label="Quantity control">
+                        <button type="button" aria-label="Decrease quantity">−</button>
+                        <span data-quantity>1</span>
+                        <button type="button" aria-label="Increase quantity">+</button>
+                      </div>
+                    </div>
+                    <div>
+                      <span class="label">Total</span>
+                      <strong data-line-total>$480.00</strong>
+                    </div>
+                  </div>
+
+                  <button class="link-button" type="button">Remove</button>
+                </div>
+              </article>
+
+              <article class="cart-item luxury-item" data-unit-price="920">
+                <div class="item-image image-coat" aria-hidden="true"></div>
+                <div class="item-details">
+                  <div class="item-topline">
+                    <div>
+                      <h2>Signature Wool Coat</h2>
+                      <p class="meta">Luxury tailored fit • Charcoal</p>
+                    </div>
+                    <span class="price">$920.00</span>
+                  </div>
+
+                  <div class="item-meta-row">
+                    <div>
+                      <span class="label">Unit Price</span>
+                      <strong>$920.00</strong>
+                    </div>
+                    <div>
+                      <span class="label">Quantity</span>
+                      <div class="qty-control" aria-label="Quantity control">
+                        <button type="button" aria-label="Decrease quantity">−</button>
+                        <span data-quantity>2</span>
+                        <button type="button" aria-label="Increase quantity">+</button>
+                      </div>
+                    </div>
+                    <div>
+                      <span class="label">Total</span>
+                      <strong data-line-total>$1,840.00</strong>
+                    </div>
+                  </div>
+
+                  <button class="link-button" type="button">Remove</button>
+                </div>
+              </article>
+
+              <article class="cart-item luxury-item" data-unit-price="640">
+                <div class="item-image image-bag" aria-hidden="true"></div>
+                <div class="item-details">
+                  <div class="item-topline">
+                    <div>
+                      <h2>Maison Tote</h2>
+                      <p class="meta">Structured leather • Chestnut</p>
+                    </div>
+                    <span class="price">$640.00</span>
+                  </div>
+
+                  <div class="item-meta-row">
+                    <div>
+                      <span class="label">Unit Price</span>
+                      <strong>$640.00</strong>
+                    </div>
+                    <div>
+                      <span class="label">Quantity</span>
+                      <div class="qty-control" aria-label="Quantity control">
+                        <button type="button" aria-label="Decrease quantity">−</button>
+                        <span data-quantity>1</span>
+                        <button type="button" aria-label="Increase quantity">+</button>
+                      </div>
+                    </div>
+                    <div>
+                      <span class="label">Total</span>
+                      <strong data-line-total>$640.00</strong>
+                    </div>
+                  </div>
+
+                  <button class="link-button" type="button">Remove</button>
+                </div>
+              </article>
+            </div>
+
+            <aside class="order-summary" aria-label="Order summary">
+              <div class="summary-box">
+                <h2>Summary</h2>
+
+                <div class="summary-row">
+                  <span>Subtotal</span>
+                  <strong data-subtotal>$2,960.00</strong>
+                </div>
+                <div class="summary-row">
+                  <span>Shipping</span>
+                  <strong data-shipping>$35.00</strong>
+                </div>
+                <div class="summary-row">
+                  <span>Tax</span>
+                  <strong data-tax>$236.80</strong>
+                </div>
+                <div class="summary-total">
+                  <span>Total</span>
+                  <strong data-total>$3,231.80</strong>
+                </div>
+
+                <button class="purchase-button" type="button" id="purchaseButton">Purchase</button>
+              </div>
+
+              <div class="promo-box">
+                <label for="promo-code">Promo code</label>
+                <div class="promo-input-row">
+                  <input id="promo-code" type="text" value="MAISON10" aria-label="Promo code" />
+                  <button type="button">Apply</button>
+                </div>
+              </div>
+
+              <div class="shipping-options" aria-label="Shipping options">
+                <label class="shipping-option">
+                  <input type="radio" name="shipping" checked />
+                  <span>
+                    <strong>Standard</strong>
+                    <small>3–5 business days</small>
+                  </span>
+                  <em>$15.00</em>
+                </label>
+                <label class="shipping-option">
+                  <input type="radio" name="shipping" />
+                  <span>
+                    <strong>Express</strong>
+                    <small>Next-day delivery</small>
+                  </span>
+                  <em>$35.00</em>
+                </label>
+              </div>
+            </aside>
+          </div>
+        </div>
       </section>
     </main>
+    <div class="confirmation-modal" id="confirmationModal" aria-live="polite" aria-label="Purchase confirmation">
+      <div class="confirmation-card">
+        <div class="confirmation-icon">✓</div>
+        <h3>Order placed successfully</h3>
+        <p>Your luxury items are being prepared for shipment.</p>
+        <button type="button" class="modal-button" id="closeModal">Continue Shopping</button>
+      </div>
+    </div>
     <footer class="site-footer bg-[#2b1b16] text-[#f6f0e8]"><div class="site-footer__inner mx-auto max-w-7xl px-5 py-14 sm:px-8 lg:px-10"><div class="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr_1fr]"><div class="max-w-xs"><p class="font-serif text-3xl">Su Misura</p><p class="mt-4 text-sm leading-6 text-[#e9ded0]">Quiet objects, carefully made. A considered collection of Italian shoes and leather goods.</p></div><nav aria-labelledby="footer-customer"><h2 id="footer-customer" class="text-xs font-semibold uppercase tracking-[0.18em] text-[#c58a5a]">Customer care</h2><ul class="mt-4 space-y-3 text-sm"><li><a class="footer-link" href="index.html?view=contact">Contact us</a></li><li><a class="footer-link" href="index.html?view=shipping">Shipping &amp; returns</a></li><li><a class="footer-link" href="index.html?view=size-guide">Find your size</a></li></ul></nav><nav aria-labelledby="footer-company"><h2 id="footer-company" class="text-xs font-semibold uppercase tracking-[0.18em] text-[#c58a5a]">The house</h2><ul class="mt-4 space-y-3 text-sm"><li><a class="footer-link" href="index.html?view=about">Our approach</a></li><li><a class="footer-link" href="index.html?view=journal">Journal</a></li><li><a class="footer-link" href="index.html?view=stores">Stores</a></li></ul></nav><nav aria-labelledby="footer-policies"><h2 id="footer-policies" class="text-xs font-semibold uppercase tracking-[0.18em] text-[#c58a5a]">Policies</h2><ul class="mt-4 space-y-3 text-sm"><li><a class="footer-link" href="index.html?view=privacy">Privacy</a></li><li><a class="footer-link" href="index.html?view=terms">Terms</a></li><li><a class="footer-link" href="index.html?view=accessibility">Accessibility</a></li></ul></nav></div><div class="mt-14 flex flex-col gap-3 border-t border-[#765f53] pt-5 text-xs text-[#e9ded0] sm:flex-row sm:items-center sm:justify-between"><p>© 2026 Su Misura. All rights reserved.</p><p>Crafted in Italy, considered everywhere.</p></div></div></footer>
     <script src="script.js" defer></script>
 </body>
