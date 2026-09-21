@@ -6,76 +6,88 @@
 
   <meta
     name="description"
-    content="Explore the Su Misura collection of considered Italian shoes and leather goods."
+    content="Discover Su Misura's considered Italian footwear, shirts, pants, and accessories, crafted for everyday living."
   />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="catalog/" />
 
-  <title>Catalog — Su Misura</title>
+  <title>Su Misura | Catalog</title>
 
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-espresso: #2b1b16;
+      --color-cream: #f6f0e8;
+      --color-parchment: #e9ded0;
+      --color-chestnut: #5a3425;
+      --color-saddle: #9a6040;
+      --color-cognac: #c58a5a;
+      --color-muted: #765f53;
+      --color-off-white: #fffdfc;
+    }
+  </style>
 
   <link rel="stylesheet" href="../style.css" />
 </head>
 
-<body class="bg-[#f6f0e8] text-[#2b1b16]">
+<body class="bg-cream text-espresso">
 
-  <!-- Catalog-only page shell -->
   <a
     href="#main-content"
-    class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:bg-[#2b1b16] focus:px-4 focus:py-3 focus:text-white"
+    class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:bg-espresso focus:px-4 focus:py-3 focus:text-white"
   >
     Skip to main content
   </a>
 
-  <header class="border-b border-[#e9ded0] bg-[#f6f0e8]">
-    <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-5 sm:px-8 lg:px-10">
+  <header class="site-header border-b border-parchment bg-cream" data-site-header>
+    <div class="site-header__inner mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-x-5 gap-y-3 px-5 py-4 sm:px-8 lg:flex-nowrap lg:px-10">
 
       <a
         href="../index.html"
-        class="font-serif text-2xl tracking-[0.08em] text-[#2b1b16]"
+        class="site-header__brand shrink-0 font-serif text-2xl tracking-[0.08em] text-espresso transition-colors duration-200 hover:text-chestnut focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cognac"
         aria-label="Su Misura home"
       >
         Su Misura
       </a>
 
-      <nav aria-label="Catalog navigation">
-        <ul class="flex items-center gap-4 text-sm sm:gap-7">
+      <button class="site-nav__toggle order-3 inline-flex min-h-11 min-w-11 items-center justify-center rounded-sm border border-chestnut text-espresso transition-colors duration-200 hover:bg-parchment focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cognac lg:hidden" type="button" aria-controls="primary-menu" aria-expanded="false">
+        <span class="sr-only" data-menu-label>Open menu</span>
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16" />
+        </svg>
+      </button>
+
+      <nav class="site-nav order-5 hidden w-full border-t border-parchment pt-3 lg:order-2 lg:block lg:w-auto lg:border-0 lg:p-0" id="primary-menu" aria-label="Primary" data-mobile-menu>
+        <ul class="flex flex-col gap-1 lg:flex-row lg:items-center lg:gap-7">
           <li>
-            <a
-              href="../index.html?view=catalog"
-              class="border-b-2 border-[#5a3425] pb-2 font-medium"
-              aria-current="page"
-            >
-              Catalog
-            </a>
+            <a class="site-nav__link inline-flex min-h-11 items-center border-b-2 border-transparent py-2 text-sm font-medium transition-colors duration-200 hover:border-saddle hover:text-chestnut focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cognac" href="../index.html#new-arrivals" data-nav-link>New arrivals</a>
           </li>
           <li>
-            <a
-              href="../index.html?view=shoes"
-              class="hidden pb-2 sm:inline-block"
-            >
-              Shoes
-            </a>
+            <a class="site-nav__link inline-flex min-h-11 items-center border-b-2 border-transparent py-2 text-sm font-medium transition-colors duration-200 hover:border-saddle hover:text-chestnut focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cognac" href="../index.html#best-sellers" data-nav-link>Best sellers</a>
           </li>
           <li>
-            <a
-              href="../index.html?view=leather-goods"
-              class="hidden pb-2 sm:inline-block"
-            >
-              Leather goods
-            </a>
+            <a class="site-nav__link inline-flex min-h-11 items-center border-b-2 border-transparent py-2 text-sm font-medium transition-colors duration-200 hover:border-saddle hover:text-chestnut focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cognac" href="../index.html#categories" data-nav-link>Categories</a>
           </li>
           <li>
-            <a
-              href="../index.html?view=cart"
-              class="pb-2 font-medium"
-            >
-              Bag <span aria-hidden="true">0</span>
-            </a>
+            <a class="site-nav__link inline-flex min-h-11 items-center border-b-2 border-transparent py-2 text-sm font-medium transition-colors duration-200 hover:border-saddle hover:text-chestnut focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cognac" href="../index.html#about" data-nav-link>About</a>
           </li>
         </ul>
       </nav>
 
+      <div class="site-header__utilities order-2 ml-auto flex items-center gap-1 sm:gap-2 lg:order-3 lg:ml-0" aria-label="Utility">
+        <form class="home-search hidden items-center border-b border-muted sm:flex" action="../index.html" method="get" role="search">
+          <label class="sr-only" for="site-search">Search products</label>
+          <input class="h-11 w-28 bg-transparent px-1 text-sm text-espresso outline-none placeholder:text-muted md:w-36" id="site-search" name="q" type="search" placeholder="Search" />
+          <button class="inline-flex min-h-11 min-w-11 items-center justify-center text-chestnut transition-colors hover:text-saddle focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cognac" type="submit" aria-label="Submit search">
+            <span aria-hidden="true">⌕</span>
+          </button>
+        </form>
+        <a class="hidden min-h-11 items-center px-2 text-sm transition-colors duration-200 hover:text-chestnut focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cognac md:inline-flex" href="../index.html#account">Account</a>
+        <a class="inline-flex min-h-11 items-center gap-1 px-2 text-sm font-medium transition-colors duration-200 hover:text-chestnut focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cognac" href="../index.html#bag" data-bag-link aria-label="Bag, empty"><span>Bag</span><span class="text-muted" data-bag-count aria-hidden="true">0</span></a>
+      </div>
+
     </div>
+    <p class="sr-only" role="status" aria-live="polite" data-site-status></p>
   </header>
 
   <main id="main-content" tabindex="-1">
@@ -87,7 +99,7 @@
     >
       <div class="max-w-2xl">
 
-        <p class="text-xs font-semibold uppercase tracking-[0.22em] text-[#765f53]">
+        <p class="text-xs font-semibold uppercase tracking-[0.22em] text-muted">
           The collection
         </p>
 
@@ -98,7 +110,7 @@
           Considered pieces for everyday life.
         </h1>
 
-        <p class="mt-6 max-w-xl text-lg leading-8 text-[#765f53]">
+        <p class="mt-6 max-w-xl text-lg leading-8 text-muted">
           Explore Italian shoes and leather goods shaped by material,
           construction, and quiet attention to detail.
         </p>
@@ -109,7 +121,7 @@
     <!-- Catalog controls -->
     <section
       aria-labelledby="filter-heading"
-      class="border-y border-[#e9ded0] bg-[#e9ded0]"
+      class="border-y border-parchment bg-parchment"
     >
       <div class="mx-auto max-w-7xl px-5 py-6 sm:px-8 lg:px-10">
 
@@ -133,7 +145,7 @@
             <select
               id="category-filter"
               name="category"
-              class="min-h-11 w-full border border-[#2b1b16] bg-[#fffdfc] px-3 text-base"
+              class="min-h-11 w-full border border-espresso bg-off-white px-3 text-base"
             >
               <option value="all">All categories</option>
               <option value="shoes">Shoes</option>
@@ -152,7 +164,7 @@
             <select
               id="size-filter"
               name="size"
-              class="min-h-11 w-full border border-[#2b1b16] bg-[#fffdfc] px-3 text-base"
+              class="min-h-11 w-full border border-espresso bg-off-white px-3 text-base"
             >
               <option value="all">All sizes</option>
               <option value="38">38</option>
@@ -169,7 +181,7 @@
           <div class="flex items-end">
             <button
               type="reset"
-              class="min-h-11 w-full border border-[#2b1b16] px-5 text-sm font-medium transition hover:bg-[#f6f0e8] focus-visible:outline-2 focus-visible:outline-[#c58a5a] md:w-auto"
+              class="min-h-11 w-full border border-espresso px-5 text-sm font-medium transition hover:bg-cream focus-visible:outline-2 focus-visible:outline-cognac md:w-auto"
             >
               Clear filters
             </button>
@@ -179,7 +191,7 @@
 
         <p
           id="catalog-status"
-          class="mt-4 text-sm text-[#765f53]"
+          class="mt-4 text-sm text-muted"
           role="status"
           aria-live="polite"
         >
@@ -197,7 +209,7 @@
 
       <div class="mb-8 flex items-end justify-between gap-4">
         <div>
-          <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[#765f53]">
+          <p class="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
             Su Misura
           </p>
 
@@ -219,17 +231,17 @@
 
           <a
             href="../index.html?view=product&id=1"
-            class="block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c58a5a]"
+            class="block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cognac"
             aria-label="View details for Luca Derby"
           >
 
             <div
-              class="flex aspect-[4/5] items-end justify-start bg-[#e9ded0] p-5"
+              class="flex aspect-[4/5] items-end justify-start bg-parchment p-5"
               role="img"
               aria-label="Luca Derby, Polished calf leather"
             >
-              <div class="w-full border-l-2 border-[#c58a5a] pl-4">
-                <span class="font-serif text-2xl text-[#5a3425]">
+              <div class="w-full border-l-2 border-cognac pl-4">
+                <span class="font-serif text-2xl text-chestnut">
                   Su Misura
                 </span>
               </div>
@@ -237,7 +249,7 @@
 
             <div class="pt-5">
 
-              <p class="text-xs font-semibold uppercase tracking-[0.16em] text-[#765f53]">
+              <p class="text-xs font-semibold uppercase tracking-[0.16em] text-muted">
                 Shoes
               </p>
 
@@ -245,7 +257,7 @@
                 Luca Derby
               </h3>
 
-              <p class="mt-1 text-base text-[#765f53]">
+              <p class="mt-1 text-base text-muted">
                 Polished calf leather
               </p>
 
@@ -253,7 +265,7 @@
                 €420
               </p>
 
-              <p class="mt-2 text-sm text-[#765f53]">
+              <p class="mt-2 text-sm text-muted">
                 Sizes 39–44
               </p>
 
@@ -268,7 +280,7 @@
 
           <button
             type="button"
-            class="mt-4 min-h-11 w-full border border-[#2b1b16] px-4 text-sm font-medium transition hover:bg-[#e9ded0] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c58a5a]"
+            class="mt-4 min-h-11 w-full border border-espresso px-4 text-sm font-medium transition hover:bg-parchment focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cognac"
           >
             Add to bag
           </button>
@@ -279,17 +291,17 @@
 
           <a
             href="../index.html?view=product&id=2"
-            class="block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c58a5a]"
+            class="block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cognac"
             aria-label="View details for Matteo Loafer"
           >
 
             <div
-              class="flex aspect-[4/5] items-end justify-start bg-[#e9ded0] p-5"
+              class="flex aspect-[4/5] items-end justify-start bg-parchment p-5"
               role="img"
               aria-label="Matteo Loafer, Suede"
             >
-              <div class="w-full border-l-2 border-[#c58a5a] pl-4">
-                <span class="font-serif text-2xl text-[#5a3425]">
+              <div class="w-full border-l-2 border-cognac pl-4">
+                <span class="font-serif text-2xl text-chestnut">
                   Su Misura
                 </span>
               </div>
@@ -297,7 +309,7 @@
 
             <div class="pt-5">
 
-              <p class="text-xs font-semibold uppercase tracking-[0.16em] text-[#765f53]">
+              <p class="text-xs font-semibold uppercase tracking-[0.16em] text-muted">
                 Shoes
               </p>
 
@@ -305,7 +317,7 @@
                 Matteo Loafer
               </h3>
 
-              <p class="mt-1 text-base text-[#765f53]">
+              <p class="mt-1 text-base text-muted">
                 Suede
               </p>
 
@@ -313,7 +325,7 @@
                 €395
               </p>
 
-              <p class="mt-2 text-sm text-[#765f53]">
+              <p class="mt-2 text-sm text-muted">
                 Sizes 38–43
               </p>
 
@@ -328,7 +340,7 @@
 
           <button
             type="button"
-            class="mt-4 min-h-11 w-full border border-[#2b1b16] px-4 text-sm font-medium transition hover:bg-[#e9ded0] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c58a5a]"
+            class="mt-4 min-h-11 w-full border border-espresso px-4 text-sm font-medium transition hover:bg-parchment focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cognac"
           >
             Add to bag
           </button>
@@ -339,17 +351,17 @@
 
           <a
             href="../index.html?view=product&id=3"
-            class="block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c58a5a]"
+            class="block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cognac"
             aria-label="View details for Roma Oxford"
           >
 
             <div
-              class="flex aspect-[4/5] items-end justify-start bg-[#e9ded0] p-5"
+              class="flex aspect-[4/5] items-end justify-start bg-parchment p-5"
               role="img"
               aria-label="Roma Oxford, Full-grain leather"
             >
-              <div class="w-full border-l-2 border-[#c58a5a] pl-4">
-                <span class="font-serif text-2xl text-[#5a3425]">
+              <div class="w-full border-l-2 border-cognac pl-4">
+                <span class="font-serif text-2xl text-chestnut">
                   Su Misura
                 </span>
               </div>
@@ -357,7 +369,7 @@
 
             <div class="pt-5">
 
-              <p class="text-xs font-semibold uppercase tracking-[0.16em] text-[#765f53]">
+              <p class="text-xs font-semibold uppercase tracking-[0.16em] text-muted">
                 Shoes
               </p>
 
@@ -365,7 +377,7 @@
                 Roma Oxford
               </h3>
 
-              <p class="mt-1 text-base text-[#765f53]">
+              <p class="mt-1 text-base text-muted">
                 Full-grain leather
               </p>
 
@@ -373,7 +385,7 @@
                 €450
               </p>
 
-              <p class="mt-2 text-sm text-[#765f53]">
+              <p class="mt-2 text-sm text-muted">
                 Sizes 40–45
               </p>
 
@@ -388,7 +400,7 @@
 
           <button
             type="button"
-            class="mt-4 min-h-11 w-full border border-[#2b1b16] px-4 text-sm font-medium transition hover:bg-[#e9ded0] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c58a5a]"
+            class="mt-4 min-h-11 w-full border border-espresso px-4 text-sm font-medium transition hover:bg-parchment focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cognac"
           >
             Add to bag
           </button>
@@ -399,17 +411,17 @@
 
           <a
             href="../index.html?view=product&id=4"
-            class="block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c58a5a]"
+            class="block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cognac"
             aria-label="View details for Pietro Chelsea"
           >
 
             <div
-              class="flex aspect-[4/5] items-end justify-start bg-[#e9ded0] p-5"
+              class="flex aspect-[4/5] items-end justify-start bg-parchment p-5"
               role="img"
               aria-label="Pietro Chelsea, Brushed calf leather"
             >
-              <div class="w-full border-l-2 border-[#c58a5a] pl-4">
-                <span class="font-serif text-2xl text-[#5a3425]">
+              <div class="w-full border-l-2 border-cognac pl-4">
+                <span class="font-serif text-2xl text-chestnut">
                   Su Misura
                 </span>
               </div>
@@ -417,7 +429,7 @@
 
             <div class="pt-5">
 
-              <p class="text-xs font-semibold uppercase tracking-[0.16em] text-[#765f53]">
+              <p class="text-xs font-semibold uppercase tracking-[0.16em] text-muted">
                 Shoes
               </p>
 
@@ -425,7 +437,7 @@
                 Pietro Chelsea
               </h3>
 
-              <p class="mt-1 text-base text-[#765f53]">
+              <p class="mt-1 text-base text-muted">
                 Brushed calf leather
               </p>
 
@@ -433,7 +445,7 @@
                 €470
               </p>
 
-              <p class="mt-2 text-sm text-[#765f53]">
+              <p class="mt-2 text-sm text-muted">
                 Sizes 39–44
               </p>
 
@@ -448,7 +460,7 @@
 
           <button
             type="button"
-            class="mt-4 min-h-11 w-full border border-[#2b1b16] px-4 text-sm font-medium transition hover:bg-[#e9ded0] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c58a5a]"
+            class="mt-4 min-h-11 w-full border border-espresso px-4 text-sm font-medium transition hover:bg-parchment focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cognac"
           >
             Add to bag
           </button>
@@ -459,17 +471,17 @@
 
           <a
             href="../index.html?view=product&id=5"
-            class="block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c58a5a]"
+            class="block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cognac"
             aria-label="View details for Alba Ballet"
           >
 
             <div
-              class="flex aspect-[4/5] items-end justify-start bg-[#e9ded0] p-5"
+              class="flex aspect-[4/5] items-end justify-start bg-parchment p-5"
               role="img"
               aria-label="Alba Ballet, Soft nappa leather"
             >
-              <div class="w-full border-l-2 border-[#c58a5a] pl-4">
-                <span class="font-serif text-2xl text-[#5a3425]">
+              <div class="w-full border-l-2 border-cognac pl-4">
+                <span class="font-serif text-2xl text-chestnut">
                   Su Misura
                 </span>
               </div>
@@ -477,7 +489,7 @@
 
             <div class="pt-5">
 
-              <p class="text-xs font-semibold uppercase tracking-[0.16em] text-[#765f53]">
+              <p class="text-xs font-semibold uppercase tracking-[0.16em] text-muted">
                 Shoes
               </p>
 
@@ -485,7 +497,7 @@
                 Alba Ballet
               </h3>
 
-              <p class="mt-1 text-base text-[#765f53]">
+              <p class="mt-1 text-base text-muted">
                 Soft nappa leather
               </p>
 
@@ -493,7 +505,7 @@
                 €340
               </p>
 
-              <p class="mt-2 text-sm text-[#765f53]">
+              <p class="mt-2 text-sm text-muted">
                 Sizes 38–42
               </p>
 
@@ -508,7 +520,7 @@
 
           <button
             type="button"
-            class="mt-4 min-h-11 w-full border border-[#2b1b16] px-4 text-sm font-medium transition hover:bg-[#e9ded0] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c58a5a]"
+            class="mt-4 min-h-11 w-full border border-espresso px-4 text-sm font-medium transition hover:bg-parchment focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cognac"
           >
             Add to bag
           </button>
@@ -519,17 +531,17 @@
 
           <a
             href="../index.html?view=product&id=6"
-            class="block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c58a5a]"
+            class="block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cognac"
             aria-label="View details for Venezia Moccasin"
           >
 
             <div
-              class="flex aspect-[4/5] items-end justify-start bg-[#e9ded0] p-5"
+              class="flex aspect-[4/5] items-end justify-start bg-parchment p-5"
               role="img"
               aria-label="Venezia Moccasin, Pebbled leather"
             >
-              <div class="w-full border-l-2 border-[#c58a5a] pl-4">
-                <span class="font-serif text-2xl text-[#5a3425]">
+              <div class="w-full border-l-2 border-cognac pl-4">
+                <span class="font-serif text-2xl text-chestnut">
                   Su Misura
                 </span>
               </div>
@@ -537,7 +549,7 @@
 
             <div class="pt-5">
 
-              <p class="text-xs font-semibold uppercase tracking-[0.16em] text-[#765f53]">
+              <p class="text-xs font-semibold uppercase tracking-[0.16em] text-muted">
                 Shoes
               </p>
 
@@ -545,7 +557,7 @@
                 Venezia Moccasin
               </h3>
 
-              <p class="mt-1 text-base text-[#765f53]">
+              <p class="mt-1 text-base text-muted">
                 Pebbled leather
               </p>
 
@@ -553,7 +565,7 @@
                 €410
               </p>
 
-              <p class="mt-2 text-sm text-[#765f53]">
+              <p class="mt-2 text-sm text-muted">
                 Sizes 39–44
               </p>
 
@@ -568,7 +580,7 @@
 
           <button
             type="button"
-            class="mt-4 min-h-11 w-full border border-[#2b1b16] px-4 text-sm font-medium transition hover:bg-[#e9ded0] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c58a5a]"
+            class="mt-4 min-h-11 w-full border border-espresso px-4 text-sm font-medium transition hover:bg-parchment focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cognac"
           >
             Add to bag
           </button>
@@ -579,17 +591,17 @@
 
           <a
             href="../index.html?view=product&id=7"
-            class="block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c58a5a]"
+            class="block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cognac"
             aria-label="View details for Milano Ankle Boot"
           >
 
             <div
-              class="flex aspect-[4/5] items-end justify-start bg-[#e9ded0] p-5"
+              class="flex aspect-[4/5] items-end justify-start bg-parchment p-5"
               role="img"
               aria-label="Milano Ankle Boot, Vegetable-tanned leather"
             >
-              <div class="w-full border-l-2 border-[#c58a5a] pl-4">
-                <span class="font-serif text-2xl text-[#5a3425]">
+              <div class="w-full border-l-2 border-cognac pl-4">
+                <span class="font-serif text-2xl text-chestnut">
                   Su Misura
                 </span>
               </div>
@@ -597,7 +609,7 @@
 
             <div class="pt-5">
 
-              <p class="text-xs font-semibold uppercase tracking-[0.16em] text-[#765f53]">
+              <p class="text-xs font-semibold uppercase tracking-[0.16em] text-muted">
                 Shoes
               </p>
 
@@ -605,7 +617,7 @@
                 Milano Ankle Boot
               </h3>
 
-              <p class="mt-1 text-base text-[#765f53]">
+              <p class="mt-1 text-base text-muted">
                 Vegetable-tanned leather
               </p>
 
@@ -613,7 +625,7 @@
                 €490
               </p>
 
-              <p class="mt-2 text-sm text-[#765f53]">
+              <p class="mt-2 text-sm text-muted">
                 Sizes 40–45
               </p>
 
@@ -628,7 +640,7 @@
 
           <button
             type="button"
-            class="mt-4 min-h-11 w-full border border-[#2b1b16] px-4 text-sm font-medium transition hover:bg-[#e9ded0] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c58a5a]"
+            class="mt-4 min-h-11 w-full border border-espresso px-4 text-sm font-medium transition hover:bg-parchment focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cognac"
           >
             Add to bag
           </button>
@@ -639,17 +651,17 @@
 
           <a
             href="../index.html?view=product&id=8"
-            class="block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c58a5a]"
+            class="block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cognac"
             aria-label="View details for Torino Sneaker"
           >
 
             <div
-              class="flex aspect-[4/5] items-end justify-start bg-[#e9ded0] p-5"
+              class="flex aspect-[4/5] items-end justify-start bg-parchment p-5"
               role="img"
               aria-label="Torino Sneaker, Leather and suede"
             >
-              <div class="w-full border-l-2 border-[#c58a5a] pl-4">
-                <span class="font-serif text-2xl text-[#5a3425]">
+              <div class="w-full border-l-2 border-cognac pl-4">
+                <span class="font-serif text-2xl text-chestnut">
                   Su Misura
                 </span>
               </div>
@@ -657,7 +669,7 @@
 
             <div class="pt-5">
 
-              <p class="text-xs font-semibold uppercase tracking-[0.16em] text-[#765f53]">
+              <p class="text-xs font-semibold uppercase tracking-[0.16em] text-muted">
                 Shoes
               </p>
 
@@ -665,7 +677,7 @@
                 Torino Sneaker
               </h3>
 
-              <p class="mt-1 text-base text-[#765f53]">
+              <p class="mt-1 text-base text-muted">
                 Leather and suede
               </p>
 
@@ -673,7 +685,7 @@
                 €365
               </p>
 
-              <p class="mt-2 text-sm text-[#765f53]">
+              <p class="mt-2 text-sm text-muted">
                 Sizes 39–44
               </p>
 
@@ -688,7 +700,7 @@
 
           <button
             type="button"
-            class="mt-4 min-h-11 w-full border border-[#2b1b16] px-4 text-sm font-medium transition hover:bg-[#e9ded0] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c58a5a]"
+            class="mt-4 min-h-11 w-full border border-espresso px-4 text-sm font-medium transition hover:bg-parchment focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cognac"
           >
             Add to bag
           </button>
@@ -699,17 +711,17 @@
 
           <a
             href="../index.html?view=product&id=9"
-            class="block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c58a5a]"
+            class="block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cognac"
             aria-label="View details for Firenze Double Monk"
           >
 
             <div
-              class="flex aspect-[4/5] items-end justify-start bg-[#e9ded0] p-5"
+              class="flex aspect-[4/5] items-end justify-start bg-parchment p-5"
               role="img"
               aria-label="Firenze Double Monk, Antique calf leather"
             >
-              <div class="w-full border-l-2 border-[#c58a5a] pl-4">
-                <span class="font-serif text-2xl text-[#5a3425]">
+              <div class="w-full border-l-2 border-cognac pl-4">
+                <span class="font-serif text-2xl text-chestnut">
                   Su Misura
                 </span>
               </div>
@@ -717,7 +729,7 @@
 
             <div class="pt-5">
 
-              <p class="text-xs font-semibold uppercase tracking-[0.16em] text-[#765f53]">
+              <p class="text-xs font-semibold uppercase tracking-[0.16em] text-muted">
                 Shoes
               </p>
 
@@ -725,7 +737,7 @@
                 Firenze Double Monk
               </h3>
 
-              <p class="mt-1 text-base text-[#765f53]">
+              <p class="mt-1 text-base text-muted">
                 Antique calf leather
               </p>
 
@@ -733,7 +745,7 @@
                 €465
               </p>
 
-              <p class="mt-2 text-sm text-[#765f53]">
+              <p class="mt-2 text-sm text-muted">
                 Sizes 40–44
               </p>
 
@@ -748,7 +760,7 @@
 
           <button
             type="button"
-            class="mt-4 min-h-11 w-full border border-[#2b1b16] px-4 text-sm font-medium transition hover:bg-[#e9ded0] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c58a5a]"
+            class="mt-4 min-h-11 w-full border border-espresso px-4 text-sm font-medium transition hover:bg-parchment focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cognac"
           >
             Add to bag
           </button>
@@ -759,17 +771,17 @@
 
           <a
             href="../index.html?view=product&id=10"
-            class="block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c58a5a]"
+            class="block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cognac"
             aria-label="View details for Napoli Penny Loafer"
           >
 
             <div
-              class="flex aspect-[4/5] items-end justify-start bg-[#e9ded0] p-5"
+              class="flex aspect-[4/5] items-end justify-start bg-parchment p-5"
               role="img"
               aria-label="Napoli Penny Loafer, Suede"
             >
-              <div class="w-full border-l-2 border-[#c58a5a] pl-4">
-                <span class="font-serif text-2xl text-[#5a3425]">
+              <div class="w-full border-l-2 border-cognac pl-4">
+                <span class="font-serif text-2xl text-chestnut">
                   Su Misura
                 </span>
               </div>
@@ -777,7 +789,7 @@
 
             <div class="pt-5">
 
-              <p class="text-xs font-semibold uppercase tracking-[0.16em] text-[#765f53]">
+              <p class="text-xs font-semibold uppercase tracking-[0.16em] text-muted">
                 Shoes
               </p>
 
@@ -785,7 +797,7 @@
                 Napoli Penny Loafer
               </h3>
 
-              <p class="mt-1 text-base text-[#765f53]">
+              <p class="mt-1 text-base text-muted">
                 Suede
               </p>
 
@@ -793,7 +805,7 @@
                 €390
               </p>
 
-              <p class="mt-2 text-sm text-[#765f53]">
+              <p class="mt-2 text-sm text-muted">
                 Sizes 38–43
               </p>
 
@@ -808,7 +820,7 @@
 
           <button
             type="button"
-            class="mt-4 min-h-11 w-full border border-[#2b1b16] px-4 text-sm font-medium transition hover:bg-[#e9ded0] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c58a5a]"
+            class="mt-4 min-h-11 w-full border border-espresso px-4 text-sm font-medium transition hover:bg-parchment focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cognac"
           >
             Add to bag
           </button>
@@ -819,17 +831,17 @@
 
           <a
             href="../index.html?view=product&id=11"
-            class="block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c58a5a]"
+            class="block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cognac"
             aria-label="View details for Porta Card Case"
           >
 
             <div
-              class="flex aspect-[4/5] items-end justify-start bg-[#e9ded0] p-5"
+              class="flex aspect-[4/5] items-end justify-start bg-parchment p-5"
               role="img"
               aria-label="Porta Card Case, Grained leather"
             >
-              <div class="w-full border-l-2 border-[#9a6040] pl-4">
-                <span class="font-serif text-2xl text-[#5a3425]">
+              <div class="w-full border-l-2 border-saddle pl-4">
+                <span class="font-serif text-2xl text-chestnut">
                   Su Misura
                 </span>
               </div>
@@ -837,7 +849,7 @@
 
             <div class="pt-5">
 
-              <p class="text-xs font-semibold uppercase tracking-[0.16em] text-[#765f53]">
+              <p class="text-xs font-semibold uppercase tracking-[0.16em] text-muted">
                 Leather goods
               </p>
 
@@ -845,7 +857,7 @@
                 Porta Card Case
               </h3>
 
-              <p class="mt-1 text-base text-[#765f53]">
+              <p class="mt-1 text-base text-muted">
                 Grained leather
               </p>
 
@@ -853,7 +865,7 @@
                 €120
               </p>
 
-              <p class="mt-2 text-sm text-[#765f53]">
+              <p class="mt-2 text-sm text-muted">
                 One size
               </p>
 
@@ -868,7 +880,7 @@
 
           <button
             type="button"
-            class="mt-4 min-h-11 w-full border border-[#2b1b16] px-4 text-sm font-medium transition hover:bg-[#e9ded0] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c58a5a]"
+            class="mt-4 min-h-11 w-full border border-espresso px-4 text-sm font-medium transition hover:bg-parchment focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cognac"
           >
             Add to bag
           </button>
@@ -879,17 +891,17 @@
 
           <a
             href="../index.html?view=product&id=12"
-            class="block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c58a5a]"
+            class="block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cognac"
             aria-label="View details for Roma Belt"
           >
 
             <div
-              class="flex aspect-[4/5] items-end justify-start bg-[#e9ded0] p-5"
+              class="flex aspect-[4/5] items-end justify-start bg-parchment p-5"
               role="img"
               aria-label="Roma Belt, Full-grain leather"
             >
-              <div class="w-full border-l-2 border-[#9a6040] pl-4">
-                <span class="font-serif text-2xl text-[#5a3425]">
+              <div class="w-full border-l-2 border-saddle pl-4">
+                <span class="font-serif text-2xl text-chestnut">
                   Su Misura
                 </span>
               </div>
@@ -897,7 +909,7 @@
 
             <div class="pt-5">
 
-              <p class="text-xs font-semibold uppercase tracking-[0.16em] text-[#765f53]">
+              <p class="text-xs font-semibold uppercase tracking-[0.16em] text-muted">
                 Leather goods
               </p>
 
@@ -905,7 +917,7 @@
                 Roma Belt
               </h3>
 
-              <p class="mt-1 text-base text-[#765f53]">
+              <p class="mt-1 text-base text-muted">
                 Full-grain leather
               </p>
 
@@ -913,7 +925,7 @@
                 €145
               </p>
 
-              <p class="mt-2 text-sm text-[#765f53]">
+              <p class="mt-2 text-sm text-muted">
                 One size
               </p>
 
@@ -928,7 +940,7 @@
 
           <button
             type="button"
-            class="mt-4 min-h-11 w-full border border-[#2b1b16] px-4 text-sm font-medium transition hover:bg-[#e9ded0] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c58a5a]"
+            class="mt-4 min-h-11 w-full border border-espresso px-4 text-sm font-medium transition hover:bg-parchment focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cognac"
           >
             Add to bag
           </button>
@@ -939,17 +951,17 @@
 
           <a
             href="../index.html?view=product&id=13"
-            class="block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c58a5a]"
+            class="block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cognac"
             aria-label="View details for Milano Tote"
           >
 
             <div
-              class="flex aspect-[4/5] items-end justify-start bg-[#e9ded0] p-5"
+              class="flex aspect-[4/5] items-end justify-start bg-parchment p-5"
               role="img"
               aria-label="Milano Tote, Vegetable-tanned leather"
             >
-              <div class="w-full border-l-2 border-[#9a6040] pl-4">
-                <span class="font-serif text-2xl text-[#5a3425]">
+              <div class="w-full border-l-2 border-saddle pl-4">
+                <span class="font-serif text-2xl text-chestnut">
                   Su Misura
                 </span>
               </div>
@@ -957,7 +969,7 @@
 
             <div class="pt-5">
 
-              <p class="text-xs font-semibold uppercase tracking-[0.16em] text-[#765f53]">
+              <p class="text-xs font-semibold uppercase tracking-[0.16em] text-muted">
                 Leather goods
               </p>
 
@@ -965,7 +977,7 @@
                 Milano Tote
               </h3>
 
-              <p class="mt-1 text-base text-[#765f53]">
+              <p class="mt-1 text-base text-muted">
                 Vegetable-tanned leather
               </p>
 
@@ -973,7 +985,7 @@
                 €520
               </p>
 
-              <p class="mt-2 text-sm text-[#765f53]">
+              <p class="mt-2 text-sm text-muted">
                 One size
               </p>
 
@@ -988,7 +1000,7 @@
 
           <button
             type="button"
-            class="mt-4 min-h-11 w-full border border-[#2b1b16] px-4 text-sm font-medium transition hover:bg-[#e9ded0] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c58a5a]"
+            class="mt-4 min-h-11 w-full border border-espresso px-4 text-sm font-medium transition hover:bg-parchment focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cognac"
           >
             Add to bag
           </button>
@@ -999,17 +1011,17 @@
 
           <a
             href="../index.html?view=product&id=14"
-            class="block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c58a5a]"
+            class="block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cognac"
             aria-label="View details for Luce Shoulder Bag"
           >
 
             <div
-              class="flex aspect-[4/5] items-end justify-start bg-[#e9ded0] p-5"
+              class="flex aspect-[4/5] items-end justify-start bg-parchment p-5"
               role="img"
               aria-label="Luce Shoulder Bag, Nappa leather"
             >
-              <div class="w-full border-l-2 border-[#9a6040] pl-4">
-                <span class="font-serif text-2xl text-[#5a3425]">
+              <div class="w-full border-l-2 border-saddle pl-4">
+                <span class="font-serif text-2xl text-chestnut">
                   Su Misura
                 </span>
               </div>
@@ -1017,7 +1029,7 @@
 
             <div class="pt-5">
 
-              <p class="text-xs font-semibold uppercase tracking-[0.16em] text-[#765f53]">
+              <p class="text-xs font-semibold uppercase tracking-[0.16em] text-muted">
                 Leather goods
               </p>
 
@@ -1025,7 +1037,7 @@
                 Luce Shoulder Bag
               </h3>
 
-              <p class="mt-1 text-base text-[#765f53]">
+              <p class="mt-1 text-base text-muted">
                 Nappa leather
               </p>
 
@@ -1033,7 +1045,7 @@
                 €480
               </p>
 
-              <p class="mt-2 text-sm text-[#765f53]">
+              <p class="mt-2 text-sm text-muted">
                 One size
               </p>
 
@@ -1048,7 +1060,7 @@
 
           <button
             type="button"
-            class="mt-4 min-h-11 w-full border border-[#2b1b16] px-4 text-sm font-medium transition hover:bg-[#e9ded0] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c58a5a]"
+            class="mt-4 min-h-11 w-full border border-espresso px-4 text-sm font-medium transition hover:bg-parchment focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cognac"
           >
             Add to bag
           </button>
@@ -1059,17 +1071,17 @@
 
           <a
             href="../index.html?view=product&id=15"
-            class="block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c58a5a]"
+            class="block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cognac"
             aria-label="View details for Pisa Document Case"
           >
 
             <div
-              class="flex aspect-[4/5] items-end justify-start bg-[#e9ded0] p-5"
+              class="flex aspect-[4/5] items-end justify-start bg-parchment p-5"
               role="img"
               aria-label="Pisa Document Case, Calf leather"
             >
-              <div class="w-full border-l-2 border-[#9a6040] pl-4">
-                <span class="font-serif text-2xl text-[#5a3425]">
+              <div class="w-full border-l-2 border-saddle pl-4">
+                <span class="font-serif text-2xl text-chestnut">
                   Su Misura
                 </span>
               </div>
@@ -1077,7 +1089,7 @@
 
             <div class="pt-5">
 
-              <p class="text-xs font-semibold uppercase tracking-[0.16em] text-[#765f53]">
+              <p class="text-xs font-semibold uppercase tracking-[0.16em] text-muted">
                 Leather goods
               </p>
 
@@ -1085,7 +1097,7 @@
                 Pisa Document Case
               </h3>
 
-              <p class="mt-1 text-base text-[#765f53]">
+              <p class="mt-1 text-base text-muted">
                 Calf leather
               </p>
 
@@ -1093,7 +1105,7 @@
                 €430
               </p>
 
-              <p class="mt-2 text-sm text-[#765f53]">
+              <p class="mt-2 text-sm text-muted">
                 One size
               </p>
 
@@ -1108,7 +1120,7 @@
 
           <button
             type="button"
-            class="mt-4 min-h-11 w-full border border-[#2b1b16] px-4 text-sm font-medium transition hover:bg-[#e9ded0] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c58a5a]"
+            class="mt-4 min-h-11 w-full border border-espresso px-4 text-sm font-medium transition hover:bg-parchment focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cognac"
           >
             Add to bag
           </button>
@@ -1119,17 +1131,17 @@
 
           <a
             href="../index.html?view=product&id=16"
-            class="block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c58a5a]"
+            class="block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cognac"
             aria-label="View details for Vela Wallet"
           >
 
             <div
-              class="flex aspect-[4/5] items-end justify-start bg-[#e9ded0] p-5"
+              class="flex aspect-[4/5] items-end justify-start bg-parchment p-5"
               role="img"
               aria-label="Vela Wallet, Grained calf leather"
             >
-              <div class="w-full border-l-2 border-[#9a6040] pl-4">
-                <span class="font-serif text-2xl text-[#5a3425]">
+              <div class="w-full border-l-2 border-saddle pl-4">
+                <span class="font-serif text-2xl text-chestnut">
                   Su Misura
                 </span>
               </div>
@@ -1137,7 +1149,7 @@
 
             <div class="pt-5">
 
-              <p class="text-xs font-semibold uppercase tracking-[0.16em] text-[#765f53]">
+              <p class="text-xs font-semibold uppercase tracking-[0.16em] text-muted">
                 Leather goods
               </p>
 
@@ -1145,7 +1157,7 @@
                 Vela Wallet
               </h3>
 
-              <p class="mt-1 text-base text-[#765f53]">
+              <p class="mt-1 text-base text-muted">
                 Grained calf leather
               </p>
 
@@ -1153,7 +1165,7 @@
                 €175
               </p>
 
-              <p class="mt-2 text-sm text-[#765f53]">
+              <p class="mt-2 text-sm text-muted">
                 One size
               </p>
 
@@ -1168,7 +1180,7 @@
 
           <button
             type="button"
-            class="mt-4 min-h-11 w-full border border-[#2b1b16] px-4 text-sm font-medium transition hover:bg-[#e9ded0] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c58a5a]"
+            class="mt-4 min-h-11 w-full border border-espresso px-4 text-sm font-medium transition hover:bg-parchment focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cognac"
           >
             Add to bag
           </button>
@@ -1179,17 +1191,17 @@
 
           <a
             href="../index.html?view=product&id=17"
-            class="block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c58a5a]"
+            class="block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cognac"
             aria-label="View details for Firenze Travel Bag"
           >
 
             <div
-              class="flex aspect-[4/5] items-end justify-start bg-[#e9ded0] p-5"
+              class="flex aspect-[4/5] items-end justify-start bg-parchment p-5"
               role="img"
               aria-label="Firenze Travel Bag, Waxed leather"
             >
-              <div class="w-full border-l-2 border-[#9a6040] pl-4">
-                <span class="font-serif text-2xl text-[#5a3425]">
+              <div class="w-full border-l-2 border-saddle pl-4">
+                <span class="font-serif text-2xl text-chestnut">
                   Su Misura
                 </span>
               </div>
@@ -1197,7 +1209,7 @@
 
             <div class="pt-5">
 
-              <p class="text-xs font-semibold uppercase tracking-[0.16em] text-[#765f53]">
+              <p class="text-xs font-semibold uppercase tracking-[0.16em] text-muted">
                 Leather goods
               </p>
 
@@ -1205,7 +1217,7 @@
                 Firenze Travel Bag
               </h3>
 
-              <p class="mt-1 text-base text-[#765f53]">
+              <p class="mt-1 text-base text-muted">
                 Waxed leather
               </p>
 
@@ -1213,7 +1225,7 @@
                 €690
               </p>
 
-              <p class="mt-2 text-sm text-[#765f53]">
+              <p class="mt-2 text-sm text-muted">
                 One size
               </p>
 
@@ -1228,7 +1240,7 @@
 
           <button
             type="button"
-            class="mt-4 min-h-11 w-full border border-[#2b1b16] px-4 text-sm font-medium transition hover:bg-[#e9ded0] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c58a5a]"
+            class="mt-4 min-h-11 w-full border border-espresso px-4 text-sm font-medium transition hover:bg-parchment focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cognac"
           >
             Add to bag
           </button>
@@ -1239,17 +1251,17 @@
 
           <a
             href="../index.html?view=product&id=18"
-            class="block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c58a5a]"
+            class="block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cognac"
             aria-label="View details for Como Card Holder"
           >
 
             <div
-              class="flex aspect-[4/5] items-end justify-start bg-[#e9ded0] p-5"
+              class="flex aspect-[4/5] items-end justify-start bg-parchment p-5"
               role="img"
               aria-label="Como Card Holder, Smooth calf leather"
             >
-              <div class="w-full border-l-2 border-[#9a6040] pl-4">
-                <span class="font-serif text-2xl text-[#5a3425]">
+              <div class="w-full border-l-2 border-saddle pl-4">
+                <span class="font-serif text-2xl text-chestnut">
                   Su Misura
                 </span>
               </div>
@@ -1257,7 +1269,7 @@
 
             <div class="pt-5">
 
-              <p class="text-xs font-semibold uppercase tracking-[0.16em] text-[#765f53]">
+              <p class="text-xs font-semibold uppercase tracking-[0.16em] text-muted">
                 Leather goods
               </p>
 
@@ -1265,7 +1277,7 @@
                 Como Card Holder
               </h3>
 
-              <p class="mt-1 text-base text-[#765f53]">
+              <p class="mt-1 text-base text-muted">
                 Smooth calf leather
               </p>
 
@@ -1273,7 +1285,7 @@
                 €110
               </p>
 
-              <p class="mt-2 text-sm text-[#765f53]">
+              <p class="mt-2 text-sm text-muted">
                 One size
               </p>
 
@@ -1288,7 +1300,7 @@
 
           <button
             type="button"
-            class="mt-4 min-h-11 w-full border border-[#2b1b16] px-4 text-sm font-medium transition hover:bg-[#e9ded0] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c58a5a]"
+            class="mt-4 min-h-11 w-full border border-espresso px-4 text-sm font-medium transition hover:bg-parchment focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cognac"
           >
             Add to bag
           </button>
@@ -1299,17 +1311,17 @@
 
           <a
             href="../index.html?view=product&id=19"
-            class="block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c58a5a]"
+            class="block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cognac"
             aria-label="View details for Lago Crossbody"
           >
 
             <div
-              class="flex aspect-[4/5] items-end justify-start bg-[#e9ded0] p-5"
+              class="flex aspect-[4/5] items-end justify-start bg-parchment p-5"
               role="img"
               aria-label="Lago Crossbody, Soft leather"
             >
-              <div class="w-full border-l-2 border-[#9a6040] pl-4">
-                <span class="font-serif text-2xl text-[#5a3425]">
+              <div class="w-full border-l-2 border-saddle pl-4">
+                <span class="font-serif text-2xl text-chestnut">
                   Su Misura
                 </span>
               </div>
@@ -1317,7 +1329,7 @@
 
             <div class="pt-5">
 
-              <p class="text-xs font-semibold uppercase tracking-[0.16em] text-[#765f53]">
+              <p class="text-xs font-semibold uppercase tracking-[0.16em] text-muted">
                 Leather goods
               </p>
 
@@ -1325,7 +1337,7 @@
                 Lago Crossbody
               </h3>
 
-              <p class="mt-1 text-base text-[#765f53]">
+              <p class="mt-1 text-base text-muted">
                 Soft leather
               </p>
 
@@ -1333,7 +1345,7 @@
                 €395
               </p>
 
-              <p class="mt-2 text-sm text-[#765f53]">
+              <p class="mt-2 text-sm text-muted">
                 One size
               </p>
 
@@ -1348,7 +1360,7 @@
 
           <button
             type="button"
-            class="mt-4 min-h-11 w-full border border-[#2b1b16] px-4 text-sm font-medium transition hover:bg-[#e9ded0] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c58a5a]"
+            class="mt-4 min-h-11 w-full border border-espresso px-4 text-sm font-medium transition hover:bg-parchment focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cognac"
           >
             Add to bag
           </button>
@@ -1359,17 +1371,17 @@
 
           <a
             href="../index.html?view=product&id=20"
-            class="block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c58a5a]"
+            class="block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cognac"
             aria-label="View details for Torino Portfolio"
           >
 
             <div
-              class="flex aspect-[4/5] items-end justify-start bg-[#e9ded0] p-5"
+              class="flex aspect-[4/5] items-end justify-start bg-parchment p-5"
               role="img"
               aria-label="Torino Portfolio, Full-grain leather"
             >
-              <div class="w-full border-l-2 border-[#9a6040] pl-4">
-                <span class="font-serif text-2xl text-[#5a3425]">
+              <div class="w-full border-l-2 border-saddle pl-4">
+                <span class="font-serif text-2xl text-chestnut">
                   Su Misura
                 </span>
               </div>
@@ -1377,7 +1389,7 @@
 
             <div class="pt-5">
 
-              <p class="text-xs font-semibold uppercase tracking-[0.16em] text-[#765f53]">
+              <p class="text-xs font-semibold uppercase tracking-[0.16em] text-muted">
                 Leather goods
               </p>
 
@@ -1385,7 +1397,7 @@
                 Torino Portfolio
               </h3>
 
-              <p class="mt-1 text-base text-[#765f53]">
+              <p class="mt-1 text-base text-muted">
                 Full-grain leather
               </p>
 
@@ -1393,7 +1405,7 @@
                 €285
               </p>
 
-              <p class="mt-2 text-sm text-[#765f53]">
+              <p class="mt-2 text-sm text-muted">
                 One size
               </p>
 
@@ -1408,7 +1420,7 @@
 
           <button
             type="button"
-            class="mt-4 min-h-11 w-full border border-[#2b1b16] px-4 text-sm font-medium transition hover:bg-[#e9ded0] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c58a5a]"
+            class="mt-4 min-h-11 w-full border border-espresso px-4 text-sm font-medium transition hover:bg-parchment focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cognac"
           >
             Add to bag
           </button>
@@ -1419,7 +1431,7 @@
 
       <p
         id="empty-state"
-        class="hidden border border-[#e9ded0] bg-[#fffdfc] p-10 text-center text-[#765f53]"
+        class="hidden border border-parchment bg-off-white p-10 text-center text-muted"
       >
         No products match the selected filters.
       </p>
@@ -1428,24 +1440,49 @@
 
   </main>
 
-  <footer class="bg-[#2b1b16] text-[#f6f0e8]">
-    <div class="mx-auto max-w-7xl px-5 py-12 sm:px-8 lg:px-10">
-
-      <p class="font-serif text-2xl">
-        Su Misura
-      </p>
-
-      <p class="mt-3 max-w-md text-sm leading-6 text-[#e9ded0]">
-        Quiet objects, carefully made. A considered collection of
-        Italian shoes and leather goods.
-      </p>
-
-      <p class="mt-8 border-t border-[#765f53] pt-5 text-xs text-[#e9ded0]">
-        © 2026 Su Misura. All rights reserved.
-      </p>
-
+  <footer class="site-footer bg-espresso text-cream">
+    <div class="site-footer__inner mx-auto max-w-7xl px-5 py-14 sm:px-8 lg:px-10">
+      <div class="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
+        <div class="max-w-xs">
+          <p class="font-serif text-3xl">Su Misura</p>
+          <p class="mt-4 text-sm leading-6 text-parchment">
+            Quiet objects, carefully made. A considered collection of Italian
+            shoes and leather goods.
+          </p>
+        </div>
+        <nav aria-labelledby="footer-customer">
+          <h2 id="footer-customer" class="text-xs font-semibold uppercase tracking-[0.18em] text-cognac">Customer care</h2>
+          <ul class="mt-4 space-y-3 text-sm">
+            <li><a class="footer-link" href="../index.html?view=contact">Contact us</a></li>
+            <li><a class="footer-link" href="../index.html?view=shipping">Shipping &amp; returns</a></li>
+            <li><a class="footer-link" href="../index.html?view=size-guide">Find your size</a></li>
+          </ul>
+        </nav>
+        <nav aria-labelledby="footer-company">
+          <h2 id="footer-company" class="text-xs font-semibold uppercase tracking-[0.18em] text-cognac">The house</h2>
+          <ul class="mt-4 space-y-3 text-sm">
+            <li><a class="footer-link" href="../index.html?view=about">Our approach</a></li>
+            <li><a class="footer-link" href="../index.html?view=journal">Journal</a></li>
+            <li><a class="footer-link" href="../index.html?view=stores">Stores</a></li>
+          </ul>
+        </nav>
+        <nav aria-labelledby="footer-policies">
+          <h2 id="footer-policies" class="text-xs font-semibold uppercase tracking-[0.18em] text-cognac">Policies</h2>
+          <ul class="mt-4 space-y-3 text-sm">
+            <li><a class="footer-link" href="../index.html?view=privacy">Privacy</a></li>
+            <li><a class="footer-link" href="../index.html?view=terms">Terms</a></li>
+            <li><a class="footer-link" href="../index.html?view=accessibility">Accessibility</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="mt-14 flex flex-col gap-3 border-t border-muted pt-5 text-xs text-parchment sm:flex-row sm:items-center sm:justify-between">
+        <p>© 2026 Su Misura. All rights reserved.</p>
+        <p>Crafted in Italy, considered everywhere.</p>
+      </div>
     </div>
   </footer>
+
+  <script src="../script.js" defer></script>
 
 
 </body>

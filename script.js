@@ -2,7 +2,7 @@ const menuToggle = document.querySelector(".site-nav__toggle");
 const mobileMenu = document.querySelector("[data-mobile-menu]");
 const menuLabel = document.querySelector("[data-menu-label]");
 const siteStatus = document.querySelector("[data-site-status]");
-const bagLink = document.querySelector('[href*="view=cart"]');
+const bagLink = document.querySelector("[data-bag-link]");
 const bagCount = document.querySelector("[data-bag-count]");
 const navLinks = document.querySelectorAll("[data-nav-link]");
 

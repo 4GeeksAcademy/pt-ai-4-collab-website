@@ -11,26 +11,38 @@
     <link rel="canonical" href="index.html" />
     <title>Su Misura | Considered essentials, made in Italy</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-espresso: #2b1b16;
+        --color-cream: #f6f0e8;
+        --color-parchment: #e9ded0;
+        --color-chestnut: #5a3425;
+        --color-saddle: #9a6040;
+        --color-cognac: #c58a5a;
+        --color-muted: #765f53;
+        --color-off-white: #fffdfc;
+      }
+    </style>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body class="bg-cream text-espresso">
     <a class="skip-link" href="#main-content">Skip to main content</a>
     <header
-      class="site-header border-b border-[#e9ded0] bg-[#f6f0e8]"
+      class="site-header border-b border-parchment bg-cream"
       data-site-header
     >
       <div
         class="site-header__inner mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-x-5 gap-y-3 px-5 py-4 sm:px-8 lg:flex-nowrap lg:px-10"
       >
         <a
-          class="site-header__brand shrink-0 font-serif text-2xl tracking-[0.08em] text-[#2b1b16] transition-colors duration-200 hover:text-[#5a3425] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c58a5a]"
+          class="site-header__brand shrink-0 font-serif text-2xl tracking-[0.08em] text-espresso transition-colors duration-200 hover:text-chestnut focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cognac"
           href="index.html"
           aria-current="page"
           aria-label="Su Misura home"
           >Su Misura</a
         >
         <button
-          class="site-nav__toggle order-3 inline-flex min-h-11 min-w-11 items-center justify-center rounded-sm border border-[#5a3425] text-[#2b1b16] transition-colors duration-200 hover:bg-[#e9ded0] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c58a5a] lg:hidden"
+          class="site-nav__toggle order-3 inline-flex min-h-11 min-w-11 items-center justify-center rounded-sm border border-chestnut text-espresso transition-colors duration-200 hover:bg-parchment focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cognac lg:hidden"
           type="button"
           aria-controls="primary-menu"
           aria-expanded="false"
@@ -48,7 +60,7 @@
           </svg>
         </button>
         <nav
-          class="site-nav order-5 hidden w-full border-t border-[#e9ded0] pt-3 lg:order-2 lg:block lg:w-auto lg:border-0 lg:p-0"
+          class="site-nav order-5 hidden w-full border-t border-parchment pt-3 lg:order-2 lg:block lg:w-auto lg:border-0 lg:p-0"
           id="primary-menu"
           aria-label="Primary"
           data-mobile-menu
@@ -56,7 +68,7 @@
           <ul class="flex flex-col gap-1 lg:flex-row lg:items-center lg:gap-7">
             <li>
               <a
-                class="site-nav__link inline-flex min-h-11 items-center border-b-2 border-transparent py-2 text-sm font-medium transition-colors duration-200 hover:border-[#9a6040] hover:text-[#5a3425] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c58a5a]"
+                class="site-nav__link inline-flex min-h-11 items-center border-b-2 border-transparent py-2 text-sm font-medium transition-colors duration-200 hover:border-saddle hover:text-chestnut focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cognac"
                 href="#new-arrivals"
                 data-nav-link
                 >New arrivals</a
@@ -64,7 +76,7 @@
             </li>
             <li>
               <a
-                class="site-nav__link inline-flex min-h-11 items-center border-b-2 border-transparent py-2 text-sm font-medium transition-colors duration-200 hover:border-[#9a6040] hover:text-[#5a3425] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c58a5a]"
+                class="site-nav__link inline-flex min-h-11 items-center border-b-2 border-transparent py-2 text-sm font-medium transition-colors duration-200 hover:border-saddle hover:text-chestnut focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cognac"
                 href="#best-sellers"
                 data-nav-link
                 >Best sellers</a
@@ -72,7 +84,7 @@
             </li>
             <li>
               <a
-                class="site-nav__link inline-flex min-h-11 items-center border-b-2 border-transparent py-2 text-sm font-medium transition-colors duration-200 hover:border-[#9a6040] hover:text-[#5a3425] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c58a5a]"
+                class="site-nav__link inline-flex min-h-11 items-center border-b-2 border-transparent py-2 text-sm font-medium transition-colors duration-200 hover:border-saddle hover:text-chestnut focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cognac"
                 href="#categories"
                 data-nav-link
                 >Categories</a
@@ -80,7 +92,7 @@
             </li>
             <li>
               <a
-                class="site-nav__link inline-flex min-h-11 items-center border-b-2 border-transparent py-2 text-sm font-medium transition-colors duration-200 hover:border-[#9a6040] hover:text-[#5a3425] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c58a5a]"
+                class="site-nav__link inline-flex min-h-11 items-center border-b-2 border-transparent py-2 text-sm font-medium transition-colors duration-200 hover:border-saddle hover:text-chestnut focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cognac"
                 href="#about"
                 data-nav-link
                 >About</a
@@ -93,21 +105,21 @@
           aria-label="Utility"
         >
           <form
-            class="home-search hidden items-center border-b border-[#765f53] sm:flex"
+            class="home-search hidden items-center border-b border-muted sm:flex"
             action="index.html"
             method="get"
             role="search"
           >
             <label class="sr-only" for="site-search">Search products</label>
             <input
-              class="h-11 w-28 bg-transparent px-1 text-sm text-[#2b1b16] outline-none placeholder:text-[#765f53] md:w-36"
+              class="h-11 w-28 bg-transparent px-1 text-sm text-espresso outline-none placeholder:text-muted md:w-36"
               id="site-search"
               name="q"
               type="search"
               placeholder="Search"
             />
             <button
-              class="inline-flex min-h-11 min-w-11 items-center justify-center text-[#5a3425] transition-colors hover:text-[#9a6040] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c58a5a]"
+              class="inline-flex min-h-11 min-w-11 items-center justify-center text-chestnut transition-colors hover:text-saddle focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cognac"
               type="submit"
               aria-label="Submit search"
             >
@@ -125,16 +137,17 @@
             </button>
           </form>
           <a
-            class="hidden min-h-11 items-center px-2 text-sm transition-colors duration-200 hover:text-[#5a3425] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c58a5a] md:inline-flex"
+            class="hidden min-h-11 items-center px-2 text-sm transition-colors duration-200 hover:text-chestnut focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cognac md:inline-flex"
             href="index.html#account"
             >Account</a
           >
           <a
-            class="inline-flex min-h-11 items-center gap-1 px-2 text-sm font-medium transition-colors duration-200 hover:text-[#5a3425] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c58a5a]"
+            class="inline-flex min-h-11 items-center gap-1 px-2 text-sm font-medium transition-colors duration-200 hover:text-chestnut focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cognac"
             href="index.html#bag"
+            data-bag-link
             aria-label="Bag, empty"
             ><span>Bag</span
-            ><span class="text-[#765f53]" data-bag-count aria-hidden="true"
+            ><span class="text-muted" data-bag-count aria-hidden="true"
               >0</span
             ></a
           >
@@ -152,17 +165,17 @@
           <p class="eyebrow">The autumn edit · 2026</p>
           <h1
             id="hero-title"
-            class="mt-5 font-serif text-5xl leading-[.98] tracking-[-.03em] text-[#2b1b16] sm:text-7xl"
+            class="mt-5 font-serif text-5xl leading-[.98] tracking-[-.03em] text-espresso sm:text-7xl"
           >
             A quieter way to dress.
           </h1>
           <p
-            class="mt-7 max-w-lg text-base leading-7 text-[#765f53] sm:text-lg sm:leading-8"
+            class="mt-7 max-w-lg text-base leading-7 text-muted sm:text-lg sm:leading-8"
           >
             New layers, familiar textures, and everyday pieces made with
             patience in Italy.
           </p>
-          <a class="button button--primary mt-8" href="#new-arrivals"
+          <a class="button button--primary mt-8" href="catalog/index.html"
             >Shop the autumn edit</a
           >
         </div>
@@ -189,7 +202,7 @@
             <h2 id="new-arrivals-title" class="section-title">New arrivals</h2>
           </div>
           <a
-            class="text-sm font-medium text-[#5a3425] underline decoration-[#c58a5a] underline-offset-4 hover:text-[#9a6040]"
+            class="text-sm font-medium text-chestnut underline decoration-cognac underline-offset-4 hover:text-saddle"
             href="index.html?view=new-arrivals"
             >View all</a
           >
@@ -265,7 +278,7 @@
             <h2 id="best-sellers-title" class="section-title">Best sellers</h2>
           </div>
           <a
-            class="text-sm font-medium text-[#5a3425] underline decoration-[#c58a5a] underline-offset-4 hover:text-[#9a6040]"
+            class="text-sm font-medium text-chestnut underline decoration-cognac underline-offset-4 hover:text-saddle"
             href="index.html?view=best-sellers"
             >View all</a
           >
@@ -345,7 +358,7 @@
           <h2 id="story-title" class="section-title mt-4">
             Things that get better with time.
           </h2>
-          <p class="mt-6 text-base leading-7 text-[#765f53]">
+          <p class="mt-6 text-base leading-7 text-muted">
             We choose honest materials, work with small workshops, and design
             for the years ahead. Every piece is made to be worn, repaired, and
             remembered.
@@ -357,14 +370,14 @@
       </section>
     </main>
 
-    <footer class="site-footer bg-[#2b1b16] text-[#f6f0e8]">
+    <footer class="site-footer bg-espresso text-cream">
       <div
         class="site-footer__inner mx-auto max-w-7xl px-5 py-14 sm:px-8 lg:px-10"
       >
         <div class="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div class="max-w-xs">
             <p class="font-serif text-3xl">Su Misura</p>
-            <p class="mt-4 text-sm leading-6 text-[#e9ded0]">
+            <p class="mt-4 text-sm leading-6 text-parchment">
               Quiet objects, carefully made. A considered collection of Italian
               shoes and leather goods.
             </p>
@@ -372,7 +385,7 @@
           <nav aria-labelledby="footer-customer">
             <h2
               id="footer-customer"
-              class="text-xs font-semibold uppercase tracking-[0.18em] text-[#c58a5a]"
+              class="text-xs font-semibold uppercase tracking-[0.18em] text-cognac"
             >
               Customer care
             </h2>
@@ -397,7 +410,7 @@
           <nav aria-labelledby="footer-company">
             <h2
               id="footer-company"
-              class="text-xs font-semibold uppercase tracking-[0.18em] text-[#c58a5a]"
+              class="text-xs font-semibold uppercase tracking-[0.18em] text-cognac"
             >
               The house
             </h2>
@@ -420,7 +433,7 @@
           <nav aria-labelledby="footer-policies">
             <h2
               id="footer-policies"
-              class="text-xs font-semibold uppercase tracking-[0.18em] text-[#c58a5a]"
+              class="text-xs font-semibold uppercase tracking-[0.18em] text-cognac"
             >
               Policies
             </h2>
@@ -442,7 +455,7 @@
           </nav>
         </div>
         <div
-          class="mt-14 flex flex-col gap-3 border-t border-[#765f53] pt-5 text-xs text-[#e9ded0] sm:flex-row sm:items-center sm:justify-between"
+          class="mt-14 flex flex-col gap-3 border-t border-muted pt-5 text-xs text-parchment sm:flex-row sm:items-center sm:justify-between"
         >
           <p>© 2026 Su Misura. All rights reserved.</p>
           <p>Crafted in Italy, considered everywhere.</p>
